@@ -95,6 +95,10 @@ Console.WriteLine(numbers.Sum());
 
 // Snack 4: Calcola la somma e la media dei numeri da 2 a 10.
 
+Console.WriteLine();
+
+Console.WriteLine("Fourth Snack");
+
 int[] twoToTen = Enumerable.Range(2, 9).ToArray();
 
 foreach(int i in twoToTen)
@@ -106,3 +110,19 @@ foreach(int i in twoToTen)
 
 Console.WriteLine($"The sum is {twoToTen.Sum()} and the average is {Enumerable.Average(twoToTen)}");
 
+// Snack 5: Il software chiede all’utente di inserire un numero. Se il numero inserito è pari, stampa il numero, se è dispari, stampa il numero successivo.
+Console.WriteLine();
+
+Console.WriteLine("Fifth Snack");
+
+Console.Write("Insert a number: ");
+int userNumber = int.Parse(Console.ReadLine());
+
+if (userNumber % 2 == 0)
+{
+    Console.WriteLine($"{userNumber}");
+} else
+{
+    Console.WriteLine($"{userNumber + 1}");
+
+}
