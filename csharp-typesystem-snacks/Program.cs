@@ -92,3 +92,17 @@ for (int i = 0; i < 10; i++)
 
 // Sum all values inside numbers
 Console.WriteLine(numbers.Sum());
+
+// Snack 4: Calcola la somma e la media dei numeri da 2 a 10.
+
+int[] twoToTen = Enumerable.Range(2, 9).ToArray();
+
+foreach(int i in twoToTen)
+{
+    Console.Write(i);
+    Console.Write(",");
+
+}
+
+Console.WriteLine($"The sum is {twoToTen.Sum()} and the average is {Enumerable.Average(twoToTen)}");
+
