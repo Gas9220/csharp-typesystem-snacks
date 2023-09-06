@@ -188,3 +188,19 @@ for (int i = 0; i < numbers1.Length; i++)
 }
 
 Console.WriteLine(sum);
+
+// Snack 9: Crea un array vuoto e chiedi all’utente un numero da inserire nell’array. Continua a chiedere i numeri all’utente e a inserirli nell’array, fino a quando la somma degli elementi è minore di 50.
+Console.WriteLine();
+
+Console.WriteLine("Ninth Snack");
+
+List<int> numbers2 = new List<int>();
+
+do
+{
+    Console.Write("Insert a number: ");
+    int number = int.Parse(Console.ReadLine());
+    numbers2.Add(number);
+} while (numbers2.Sum() < 50);
+
+Console.WriteLine(numbers2.Sum());
