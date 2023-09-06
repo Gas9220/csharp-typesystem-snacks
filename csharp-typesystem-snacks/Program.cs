@@ -126,3 +126,20 @@ if (userNumber % 2 == 0)
     Console.WriteLine($"{userNumber + 1}");
 
 }
+
+// Snack 6: In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby. Chiedi all’utente il suo nome e comunicagli se può partecipare o meno alla festa.
+Console.WriteLine();
+
+Console.WriteLine("Sixth Snack");
+
+string[] invitedPeople = { "Luca", "Giovanni", "Simone", "Sonia", "Lucia", "Emanuela" };
+Console.Write("What's your name? ");
+string userName = Console.ReadLine();
+
+if (invitedPeople.Contains(userName))
+{
+    Console.Write("You can join the party");
+} else
+{
+    Console.Write("You can't join the party");
+}
