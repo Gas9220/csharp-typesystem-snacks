@@ -1,7 +1,8 @@
 ﻿// Snack 1: L’utente inserisce due numeri in successione. Il software stampa il maggiore.
-using System.Collections;
-using System;
 using System.Globalization;
+
+Console.WriteLine("First Snack");
+Console.WriteLine();
 
 bool isNumber = false; // used to check if user insert a number
 double firstNumber = 0; // store the first number
@@ -42,6 +43,8 @@ switch (compareNumbers)
 }
 
 // Snack 2 : L’utente inserisce due parole in successione. Il software stampa prima la parola più corta, poi la parola più lunga.
+Console.WriteLine();
+Console.WriteLine("Second Snack");
 
 // Array than contains the two string
 string?[] words = new string[2];
@@ -65,8 +68,27 @@ foreach (string word in words)
     if (words.Last() == word)
     {
         Console.Write(word);
-        return;
+        break;
     }
 
     Console.Write($"{word}, ");
 }
+
+// Snack 3: Il software deve chiedere per 10 volte all’utente di inserire un numero. Il programma stampa la somma di tutti i numeri inseriti.
+Console.WriteLine();
+Console.WriteLine();
+
+Console.WriteLine("Third Snack");
+
+// Array than contains 10 numbers
+double[] numbers = new double[10];
+
+for (int i = 0; i < 10; i++)
+{
+    Console.Write($"Insert the {i + 1}° number: ");
+    // Parse string to double
+    Double.TryParse(Console.ReadLine(), NumberStyles.Any, CultureInfo.InvariantCulture, out numbers[i]);
+}
+
+// Sum all values inside numbers
+Console.WriteLine(numbers.Sum());
