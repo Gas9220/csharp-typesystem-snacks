@@ -149,6 +149,7 @@ else
 
 // Snack 7: Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
 Console.WriteLine();
+Console.WriteLine();
 
 Console.WriteLine("Seventh Snack");
 
@@ -204,3 +205,30 @@ do
 } while (numbers2.Sum() < 50);
 
 Console.WriteLine(numbers2.Sum());
+
+// Snack 10: Fai inserire un numero, che chiameremo N, all’utente. Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100. Ogni volta che ne crei uno, stampalo a schermo.
+Console.WriteLine();
+
+Console.WriteLine("Tenth Snack");
+
+Random rnd = new Random();
+
+Console.Write("Insert a number: ");
+int n = int.Parse(Console.ReadLine());
+
+for (int i = 0; i < n; i++)
+{
+    int[] numbersArray = new int[10];
+
+    for (int j = 0; j < 10; j++)
+    {
+        numbersArray[j] = rnd.Next(10, 100);
+    }
+
+    foreach (int number in numbersArray)
+    {
+        Console.Write($"{number}, ");
+    }
+
+    Console.WriteLine();
+}
