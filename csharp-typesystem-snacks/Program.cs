@@ -101,7 +101,7 @@ Console.WriteLine("Fourth Snack");
 
 int[] twoToTen = Enumerable.Range(2, 9).ToArray();
 
-foreach(int i in twoToTen)
+foreach (int i in twoToTen)
 {
     Console.Write(i);
     Console.Write(",");
@@ -121,7 +121,8 @@ int userNumber = int.Parse(Console.ReadLine());
 if (userNumber % 2 == 0)
 {
     Console.WriteLine($"{userNumber}");
-} else
+}
+else
 {
     Console.WriteLine($"{userNumber + 1}");
 
@@ -139,7 +140,33 @@ string userName = Console.ReadLine();
 if (invitedPeople.Contains(userName))
 {
     Console.Write("You can join the party");
-} else
+}
+else
 {
     Console.Write("You can't join the party");
+}
+
+
+// Snack 7: Crea un array vuoto. Chiedi per 6 volte all’utente di inserire un numero, se è dispari inseriscilo nell’array.
+Console.WriteLine();
+
+Console.WriteLine("Seventh Snack");
+
+int[] evenNumbers = new int[6];
+
+for (int i = 0; i < 6; i++)
+{
+    Console.Write("Insert a number: ");
+    int number = int.Parse(Console.ReadLine());
+
+    if (number % 2 != 0)
+    {
+        evenNumbers[i] = number;
+    }
+}
+
+foreach (int evenNumber in evenNumbers)
+{
+    Console.Write(evenNumber);
+    Console.Write(",");
 }
