@@ -170,3 +170,21 @@ foreach (int evenNumber in evenNumbers)
     Console.Write(evenNumber);
     Console.Write(",");
 }
+
+// Snack 8: Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizione dispari.
+Console.WriteLine();
+
+Console.WriteLine("Eighth Snack");
+
+int[] numbers1 = { 10, 33, 42, 7, 99, 16 };
+int sum = 0;
+
+for (int i = 0; i < numbers1.Length; i++)
+{
+    if (i % 2 != 0)
+    {
+        sum += numbers1[i];
+    }
+}
+
+Console.WriteLine(sum);
